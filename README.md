@@ -37,22 +37,23 @@ It supports **multi-format document ingestion**, **semantic search with FAISS**,
 ---
 
 ## 🏗️ Project Structure
+Project Root
+│
+├── data/  
+│   └── Raw documents (PDF, CSV, TXT, Excel, Word, JSON)
+│
+├── faiss_store/  
+│   └── Persistent FAISS index and metadata
+│
+├── src/  
+│   ├── data_loader.py        - Multi-format document ingestion  
+│   ├── embedding.py          - Document chunking and embedding pipeline  
+│   ├── vectorstore.py        - FAISS vector store implementation  
+│   └── search.py             - RAG search and summarization logic  
+│
+├── requirements.txt          - Project dependencies  
+└── README.md                 - Project documentation
 
-.
-├── data/ # Raw documents (PDF, CSV, TXT, etc.)
-├── faiss_store/ # Persistent FAISS index
-├── src/
-│ ├── data_loader.py # Multi-format document ingestion
-│ ├── embedding.py # Chunking & embedding pipeline
-│ ├── vectorstore.py # FAISS vector store implementation
-│ └── search.py # RAG search & summarization
-├── requirements.txt
-└── README.md
-
-yaml
-Copy code
-
----
 
 ## 🔄 Architecture Overview
 
